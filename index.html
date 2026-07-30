@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO: edite estas tags conforme sua marca ===== -->
+  <title>Ofertas Selecionadas | Melhores Produtos com Preço Baixo</title>
+  <meta name="description" content="Confira ofertas selecionadas dos melhores produtos com os menores preços. Compre com segurança no Mercado Livre através dos nossos links.">
+  <meta name="keywords" content="ofertas, mercado livre, produtos, promoção, desconto, comprar online">
+  <meta name="author" content="Seu Nome ou Marca">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://seusite.com.br/">
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ofertas Selecionadas | Melhores Produtos">
+  <meta property="og:description" content="As melhores ofertas de produtos com preços baixos. Compre no Mercado Livre.">
+  <meta property="og:image" content="https://seusite.com.br/capa.jpg">
+  <meta property="og:url" content="https://seusite.com.br/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ofertas Selecionadas | Melhores Produtos">
+  <meta name="twitter:description" content="As melhores ofertas de produtos com preços baixos.">
+
+  <!-- ============================================================
+       DADOS ESTRUTURADOS (JSON-LD / schema.org)
+       Ajuda o Google a entender os produtos (rich results).
+       Ao adicionar/editar produtos, atualize também esta lista.
+  ============================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Produtos em Destaque",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Fone de Ouvido Bluetooth Sem Fio",
+          "description": "Fone Bluetooth com cancelamento de ruído, bateria de longa duração e som de alta qualidade.",
+          "image": "https://seusite.com.br/img/produto1.jpg",
+          "offers": {
+            "@type": "Offer",
+            "price": "129.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-1"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Smartwatch Esportivo à Prova d'Água",
+          "description": "Relógio inteligente com monitor cardíaco, contador de passos e notificações.",
+          "image": "https://seusite.com.br/img/produto2.jpg",
+          "offers": {
+            "@type": "Offer",
+            "price": "199.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-2"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Teclado Mecânico Gamer RGB",
+          "description": "Teclado mecânico com iluminação RGB, switches responsivos e construção resistente.",
+          "image": "https://seusite.com.br/img/produto3.jpg",
+          "offers": {
+            "@type": "Offer",
+            "price": "249.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-3"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" class="logo">Minha<span>Loja</span></a>
+        <p class="tagline">Ofertas selecionadas para você economizar</p>
+      </div>
+      <button id="tema-toggle" class="tema-toggle" aria-label="Alternar tema claro/escuro">
+        <span class="tema-icone">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Produtos em Destaque</h1>
+
+    <!-- ===== BUSCA ===== -->
+    <div class="toolbar">
+      <input type="search" id="busca" class="search-input"
+             placeholder="Buscar produto..." aria-label="Buscar produto">
+
+      <!-- ===== FILTRO DE CATEGORIAS =====
+           Para criar nova categoria: adicione um botão aqui com
+           data-cat="nome" e coloque o mesmo nome no data-cat do card. -->
+      <div class="filters" role="group" aria-label="Filtrar por categoria">
+        <button class="filter-btn active" data-cat="todos">Todos</button>
+        <button class="filter-btn" data-cat="audio">Audio</button>
+        <button class="filter-btn" data-cat="eletronicos">Eletrônicos</button>
+        <button class="filter-btn" data-cat="acessorios">Acessórios</button>
+        <button class="filter-btn" data-cat="casa">Casa</button>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         COMO ADICIONAR/EDITAR UM PRODUTO:
+         Copie um bloco <article class="card">...</article> inteiro,
+         cole abaixo e altere:
+           - data-cat  (categoria: audio/eletronicos/acessorios/casa)
+           - src da imagem e alt
+           - <h2> título
+           - <p class="card-desc"> descrição (otimizada p/ SEO)
+           - <span class="price"> preço
+           - href do link de afiliado do Mercado Livre
+         A busca lê o título automaticamente; o filtro lê data-cat.
+    ============================================================= -->
+    <section class="grid" id="grid" aria-label="Lista de produtos">
+
+      <!-- PRODUTO 1 -->
+      <article class="card" data-cat="eletronicos">
+        <div class="card-img">
+          <img src="assets/carregador.webp"
+               alt="carregador de celuylar universal"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Carregador Turbo 40w</h2>
+          <p class="card-desc">
+            Carregador Turbo 40w Compativel Com iPhone 8 
+            X Xr 11 12 13 14 Pro Max Usb Tipo C Duplo
+          </p>
+          <span class="price">R$ 33,00</span>
+          <a class="btn" href="https://meli.la/1efkAX1"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+      <!-- PRODUTO 2 -->
+      <article class="card" data-cat="eletronicos">
+        <div class="card-img">
+          <img src="assets/fonedeouvido.webp"
+               alt="Smartwatch com monitor de frequência cardíaca à prova d'água"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Fones De Ouvido Usb-c Tipo C</h2>
+          <p class="card-desc">
+            Fones De Ouvido Usb-c Tipo C Com Microfone Integrado Som Estéreo Alta Qualidade Controle De 
+            Chamadas Compatível Com iPhone 15 16 17 Android Samsung Xiaomi Motorola Conexão Direta Premium Eletric Teck
+          </p>
+          <span class="price">R$ 22,77</span>
+          <a class="btn" href="https://meli.la/1nW62Yv"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+      <!-- PRODUTO 3 -->
+      <article class="card" data-cat="eletronicos">
+        <div class="card-img">
+          <img src="assets/suporteCelular.webp"
+               alt="Teclado mecânico gamer RGB com switches azuis"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Suporte de Celular Veicular Automotivo 360º Universal</h2>
+          <p class="card-desc">
+            Suporte de Celular Veicular Automotivo 360º Universal Ajustável com Ventosa Gruda no Painel Vidro Parabrisa
+            para GPS Encaixe Giratório Articulado com Trava Automática Anti Queda para Carro Caminhão
+          </p>
+          <span class="price">R$ 24,95</span>
+          <a class="btn" href="https://meli.la/2ZJgx1h"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+      <!-- PRODUTO 4 -->
+      <article class="card" data-cat="eletronicos">
+        <div class="card-img">
+          <img src="assets/refletordeimagem.webp"
+               alt="Caixa de som Bluetooth portátil com graves potentes"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Projetor Smart Portátil Full Hd 4k</h2>
+          <p class="card-desc">
+            Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini 
+            Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos
+          </p>
+          <span class="price">R$ 193,00</span>
+          <a class="btn" href="https://meli.la/1oWRagp"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+      <!-- PRODUTO 5 -->
+      <article class="card" data-cat="acessorios">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+5"
+               alt="Mochila para notebook impermeável com porta USB"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Mochila Impermeável para Notebook</h2>
+          <p class="card-desc">
+            Mochila resistente à água com compartimento para notebook, porta USB
+            externa e vários bolsos organizadores. Ideal para trabalho e viagens.
+          </p>
+          <span class="price">R$ 89,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-5"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+      <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+        <!-- PRODUTO 6 -->
+      <article class="card" data-cat="casa">
+        <div class="card-img">
+          <img src="https://via.placeholder.com/400x400?text=Produto+6"
+               alt="Luminária de mesa LED com ajuste de brilho e carregador"
+               loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
+          <p class="card-desc">
+            Luminária LED com ajuste de intensidade, proteção para os olhos e
+            base carregadora. Perfeita para estudos e home office.
+          </p>
+          <span class="price">R$ 74,90</span>
+          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
+             target="_blank" rel="nofollow sponsored noopener">
+            Ver no Mercado Livre
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Mensagem quando nada é encontrado -->
+    <p id="sem-resultado" class="no-results" hidden>Nenhum produto encontrado.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano"></span> MinhaLoja. Todos os direitos reservados.</p>
+      <p class="disclaimer">
+        Este site participa do programa de afiliados do Mercado Livre.
+        Podemos receber comissão pelas compras realizadas através dos links.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Ano do rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // ===== Modo escuro (com memória via localStorage) =====
+    const temaBtn   = document.getElementById('tema-toggle');
+    const temaIcone = temaBtn.querySelector('.tema-icone');
+    const raiz      = document.documentElement;
+
+    // Aplica tema salvo, ou segue preferência do sistema
+    const salvo = localStorage.getItem('tema');
+    const escuroSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const temaInicial = salvo || (escuroSistema ? 'dark' : 'light');
+    aplicarTema(temaInicial);
+
+    function aplicarTema(tema) {
+      raiz.setAttribute('data-theme', tema);
+      temaIcone.textContent = tema === 'dark' ? '☀️' : '🌙';
+    }
+
+    temaBtn.addEventListener('click', () => {
+      const novo = raiz.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      aplicarTema(novo);
+      localStorage.setItem('tema', novo);
+    });
+
+    // ===== Busca + Filtro de categoria =====
+    const grid    = document.getElementById('grid');
+    const cards   = Array.from(grid.querySelectorAll('.card'));
+    const busca   = document.getElementById('busca');
+    const semRes  = document.getElementById('sem-resultado');
+    const botoes  = document.querySelectorAll('.filter-btn');
+    let catAtual  = 'todos';
+
+    function aplicarFiltros() {
+      const termo = busca.value.trim().toLowerCase();
+      let visiveis = 0;
+
+      cards.forEach(card => {
+        const titulo = card.querySelector('.card-title').textContent.toLowerCase();
+        const desc   = card.querySelector('.card-desc').textContent.toLowerCase();
+        const cat    = card.dataset.cat;
+
+        const passaCat   = (catAtual === 'todos') || (cat === catAtual);
+        const passaBusca = titulo.includes(termo) || desc.includes(termo);
+
+        const mostrar = passaCat && passaBusca;
+        card.style.display = mostrar ? '' : 'none';
+        if (mostrar) visiveis++;
+      });
+
+      semRes.hidden = visiveis > 0;
+    }
+
+    busca.addEventListener('input', aplicarFiltros);
+
+    botoes.forEach(btn => {
+      btn.addEventListener('click', () => {
+        botoes.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        catAtual = btn.dataset.cat;
+        aplicarFiltros();
+      });
+    });
+  </script>
+
+</body>
+</html>

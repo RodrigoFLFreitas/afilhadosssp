@@ -1,0 +1,5 @@
+# Troque https://seusite.com.br/ pelo seu domínio real.
+User-agent: *
+Allow: /
+
+Sitemap: https://seusite.com.br/sitemap.xml

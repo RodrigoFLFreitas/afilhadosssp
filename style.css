@@ -1,0 +1,277 @@
+/* ============================================================
+   VARIÁVEIS — mude cores/marca aqui num só lugar
+   ============================================================ */
+:root {
+  --cor-primaria: #2563eb;
+  --cor-primaria-escura: #1d4ed8;
+  --cor-fundo: #f4f6fb;
+  --cor-card: #ffffff;
+  --cor-texto: #1f2937;
+  --cor-texto-suave: #6b7280;
+  --cor-preco: #059669;
+  --cor-borda: #e2e8f0;
+  --cor-footer: #111827;
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --sombra-hover: 0 10px 28px rgba(0, 0, 0, 0.14);
+  --raio: 14px;
+  --max-largura: 1200px;
+}
+
+/* ===== MODO ESCURO ===== */
+:root[data-theme="dark"] {
+  --cor-fundo: #0f172a;
+  --cor-card: #1e293b;
+  --cor-texto: #e2e8f0;
+  --cor-texto-suave: #94a3b8;
+  --cor-preco: #34d399;
+  --cor-borda: #334155;
+  --cor-footer: #020617;
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --sombra-hover: 0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+body { transition: background 0.25s ease, color 0.25s ease; }
+
+/* ============================================================
+   RESET
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+  color: #fff;
+  padding: 28px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand { text-align: left; }
+
+.tema-toggle {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  line-height: 1;
+}
+.tema-toggle:hover { background: rgba(255, 255, 255, 0.3); }
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.logo span { color: #ffd166; }
+
+.tagline {
+  margin-top: 6px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+.page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 40px 0 28px;
+  color: var(--cor-texto);
+}
+
+/* ============================================================
+   TOOLBAR — busca + filtros de categoria
+   ============================================================ */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.search-input {
+  flex: 1 1 260px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: var(--cor-card);
+}
+.search-input { color: var(--cor-texto); }
+.search-input:focus { border-color: var(--cor-primaria); }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 9px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  background: var(--cor-card);
+  border: 2px solid var(--cor-borda);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { border-color: var(--cor-primaria); }
+.filter-btn.active {
+  background: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+  padding: 40px 0 60px;
+}
+
+/* ============================================================
+   GRID DE PRODUTOS (responsivo automático)
+   ============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding-bottom: 50px;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.card {
+  background: var(--cor-card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-hover);
+}
+
+.card-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--cor-borda);
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover .card-img img { transform: scale(1.05); }
+
+.card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--cor-preco);
+  margin-bottom: 14px;
+}
+
+/* ============================================================
+   BOTÃO / CTA
+   ============================================================ */
+.btn {
+  display: block;
+  text-align: center;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+.btn:hover { background: var(--cor-primaria-escura); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--cor-footer);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 28px 0;
+  font-size: 0.9rem;
+}
+.disclaimer {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================
+   RESPONSIVO — ajustes finos
+   ============================================================ */
+@media (max-width: 600px) {
+  .page-title { font-size: 1.5rem; }
+  .logo { font-size: 1.6rem; }
+  .grid { gap: 16px; }
+}
