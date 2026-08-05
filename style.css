@@ -268,10 +268,173 @@ a { text-decoration: none; }
 }
 
 /* ============================================================
+   BUSCA + GOOGLE
+   ============================================================ */
+.search-wrap {
+  display: flex;
+  gap: 8px;
+  flex: 1 1 320px;
+}
+.search-wrap .search-input { flex: 1 1 auto; }
+
+.google-btn {
+  flex-shrink: 0;
+  padding: 0 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  background: var(--cor-card);
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.google-btn:hover { border-color: var(--cor-primaria); color: var(--cor-primaria); }
+
+/* ============================================================
+   BADGE DE DESCONTO + PREÇO ANTIGO
+   ============================================================ */
+.card-img { position: relative; }
+.badge-desc {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: #f43f5e;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 5px 11px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.price-row .price { margin-bottom: 0; }
+.price-old {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+  text-decoration: line-through;
+}
+
+/* ============================================================
+   BOTÕES EXTRA
+   ============================================================ */
+.btn-ig {
+  margin-top: 8px;
+  background: transparent;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+}
+.btn-ig:hover { background: var(--cor-primaria); color: #fff; }
+
+.btn-disabled {
+  background: var(--cor-borda);
+  color: var(--cor-texto-suave);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================================
+   MODAL — GERADOR DE POST INSTAGRAM
+   ============================================================ */
+.ig-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+.ig-modal[hidden] { display: none; }
+
+.ig-modal-box {
+  position: relative;
+  background: var(--cor-card);
+  color: var(--cor-texto);
+  border-radius: var(--raio);
+  padding: 24px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: var(--sombra-hover);
+}
+.ig-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cor-borda);
+  color: var(--cor-texto);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.ig-close:hover { background: var(--cor-primaria); color: #fff; }
+.ig-title { margin-bottom: 18px; font-size: 1.3rem; }
+
+.ig-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+}
+.ig-preview { width: 100%; }
+#ig-canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--cor-borda);
+}
+.ig-side { display: flex; flex-direction: column; gap: 10px; }
+.ig-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+  margin-top: 6px;
+}
+.ig-select {
+  padding: 10px 12px;
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  background: var(--cor-card);
+  color: var(--cor-texto);
+  font-size: 0.95rem;
+}
+.ig-legenda {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+.ig-btn { margin-top: 4px; }
+.ig-btn-alt {
+  background: transparent;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+}
+.ig-btn-alt:hover { background: var(--cor-primaria); color: #fff; }
+
+/* ============================================================
    RESPONSIVO — ajustes finos
    ============================================================ */
 @media (max-width: 600px) {
   .page-title { font-size: 1.5rem; }
   .logo { font-size: 1.6rem; }
   .grid { gap: 16px; }
+  .ig-content { grid-template-columns: 1fr; }
+  .ig-preview { max-width: 320px; margin: 0 auto; }
 }

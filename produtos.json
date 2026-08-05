@@ -1,0 +1,61 @@
+{
+  "_comentario": "PromoRadar — banco de produtos. Edite AQUI num lugar só. O site (index.html) lê este arquivo e monta os cards + posts de Instagram automaticamente. COMO ADICIONAR: copie um bloco { ... } inteiro, cole na lista, mude os campos. CAMPOS: id (único), nome, categoria (audio/eletronicos/acessorios/casa), descricao, preco (só número, ex 33.00), precoAntigo (número OU null se não houver — quando preenchido aparece badge de % desconto), imagem (caminho do arquivo em assets/), alt (texto da imagem p/ SEO/acessibilidade), link (seu link de afiliado do Mercado Livre).",
+  "atualizadoEm": "2026-08-04",
+  "produtos": [
+    {
+      "id": "carregador-turbo-40w",
+      "nome": "Carregador Turbo 40W USB-C Duplo",
+      "categoria": "eletronicos",
+      "descricao": "Carregador Turbo 40W compatível com iPhone 8 X Xr 11 12 13 14 Pro Max. Saída USB Tipo C dupla, carrega dois aparelhos ao mesmo tempo.",
+      "preco": 33.00,
+      "precoAntigo": null,
+      "imagem": "assets/carregador.webp",
+      "alt": "Carregador turbo 40W USB-C duplo compatível com iPhone e Android",
+      "link": "https://meli.la/1efkAX1"
+    },
+    {
+      "id": "fone-usb-c",
+      "nome": "Fone de Ouvido USB-C com Microfone",
+      "categoria": "audio",
+      "descricao": "Fones USB Tipo C com microfone integrado, som estéreo de alta qualidade e controle de chamadas. Compatível com iPhone 15/16/17, Samsung, Xiaomi e Motorola.",
+      "preco": 22.77,
+      "precoAntigo": null,
+      "imagem": "assets/fonedeouvido.webp",
+      "alt": "Fone de ouvido USB-C com microfone e som estéreo",
+      "link": "https://meli.la/1nW62Yv"
+    },
+    {
+      "id": "suporte-veicular",
+      "nome": "Suporte de Celular Veicular 360º",
+      "categoria": "acessorios",
+      "descricao": "Suporte veicular automotivo 360º universal ajustável com ventosa. Gruda no painel ou parabrisa, encaixe giratório com trava automática anti-queda.",
+      "preco": 24.95,
+      "precoAntigo": null,
+      "imagem": "assets/suporteCelular.webp",
+      "alt": "Suporte de celular veicular 360 graus com ventosa para painel",
+      "link": "https://meli.la/2ZJgx1h"
+    },
+    {
+      "id": "projetor-smart-4k",
+      "nome": "Projetor Smart Portátil Full HD 4K",
+      "categoria": "eletronicos",
+      "descricao": "Projetor Smart portátil Full HD 4K, Android 11, Wi-Fi e Bluetooth. Mini projetor home theater com imagem nítida e som potente para cinema em casa.",
+      "preco": 193.00,
+      "precoAntigo": null,
+      "imagem": "assets/refletordeimagem.webp",
+      "alt": "Projetor smart portátil Full HD 4K Android com Wi-Fi e Bluetooth",
+      "link": "https://meli.la/1oWRagp"
+    },
+    {
+      "id": "smartwatch-esportivo",
+      "nome": "Smartwatch Esportivo à Prova d'Água",
+      "categoria": "eletronicos",
+      "descricao": "Relógio inteligente com monitor cardíaco, contador de passos e notificações. Resistente à água, ideal para treinos e dia a dia.",
+      "preco": 199.00,
+      "precoAntigo": null,
+      "imagem": "assets/smartWat.webp",
+      "alt": "Smartwatch esportivo à prova d'água com monitor cardíaco",
+      "link": "COLE-AQUI-SEU-LINK-DO-MERCADO-LIVRE"
+    }
+  ]
+}

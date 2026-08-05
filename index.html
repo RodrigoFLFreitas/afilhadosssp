@@ -4,94 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== SEO: edite estas tags conforme sua marca ===== -->
-  <title>Ofertas Selecionadas | Melhores Produtos com Preço Baixo</title>
-  <meta name="description" content="Confira ofertas selecionadas dos melhores produtos com os menores preços. Compre com segurança no Mercado Livre através dos nossos links.">
-  <meta name="keywords" content="ofertas, mercado livre, produtos, promoção, desconto, comprar online">
-  <meta name="author" content="Seu Nome ou Marca">
+  <!-- ===== SEO: edite para o seu domínio real ===== -->
+  <title>PromoRadar | Promoções e Achados do Mercado Livre</title>
+  <meta name="description" content="PromoRadar rastreia as melhores promoções do Mercado Livre. Ofertas selecionadas de eletrônicos, áudio, acessórios e casa com os menores preços. Achados do dia atualizados.">
+  <meta name="keywords" content="promoções mercado livre, ofertas, achados, desconto, eletrônicos baratos, comprar online, cupom mercado livre">
+  <meta name="author" content="PromoRadar">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://seusite.com.br/">
 
-  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ofertas Selecionadas | Melhores Produtos">
-  <meta property="og:description" content="As melhores ofertas de produtos com preços baixos. Compre no Mercado Livre.">
+  <meta property="og:site_name" content="PromoRadar">
+  <meta property="og:title" content="PromoRadar | Promoções e Achados do Mercado Livre">
+  <meta property="og:description" content="As melhores promoções do Mercado Livre, selecionadas para você economizar.">
   <meta property="og:image" content="https://seusite.com.br/capa.jpg">
   <meta property="og:url" content="https://seusite.com.br/">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ofertas Selecionadas | Melhores Produtos">
-  <meta name="twitter:description" content="As melhores ofertas de produtos com preços baixos.">
+  <meta name="twitter:title" content="PromoRadar | Promoções do Mercado Livre">
+  <meta name="twitter:description" content="As melhores promoções do Mercado Livre, selecionadas para você economizar.">
 
-  <!-- ============================================================
-       DADOS ESTRUTURADOS (JSON-LD / schema.org)
-       Ajuda o Google a entender os produtos (rich results).
-       Ao adicionar/editar produtos, atualize também esta lista.
-  ============================================================= -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Produtos em Destaque",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Product",
-          "name": "Carregador Turbo 40w",
-          "description": "Carregador Turbo 40w Compativel Com iPhone 8 
-            X Xr 11 12 13 14 Pro Max Usb Tipo C Duplo",
-          "image": "https://seusite.com.br/img/produto1.jpg",
-          "offers": {
-            "@type": "Offer",
-            "price": "129.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-1"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Product",
-          "name": "Smartwatch Esportivo à Prova d'Água",
-          "description": "Relógio inteligente com monitor cardíaco, contador de passos e notificações.",
-          "image": "https://seusite.com.br/img/produto2.jpg",
-          "offers": {
-            "@type": "Offer",
-            "price": "199.00",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-2"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Product",
-          "name": "Teclado Mecânico Gamer RGB",
-          "description": "Teclado mecânico com iluminação RGB, switches responsivos e construção resistente.",
-          "image": "https://seusite.com.br/img/produto3.jpg",
-          "offers": {
-            "@type": "Offer",
-            "price": "249.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "url": "https://mercadolivre.com/sec/SEU-LINK-AFILIADO-3"
-          }
-        }
-      }
-    ]
-  }
-  </script>
+  <!-- Dados estruturados são gerados dinamicamente pelo script a partir de produtos.json -->
 
+  <link rel="preconnect" href="https://www.google.com">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -99,8 +36,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a href="#" class="logo">Minha<span>Loja</span></a>
-        <p class="tagline">Ofertas selecionadas para você economizar</p>
+        <a href="#" class="logo">Promo<span>Radar</span></a>
+        <p class="tagline">📡 Rastreando as melhores promoções do Mercado Livre</p>
       </div>
       <button id="tema-toggle" class="tema-toggle" aria-label="Alternar tema claro/escuro">
         <span class="tema-icone">🌙</span>
@@ -109,412 +46,475 @@
   </header>
 
   <main class="container">
-    <h1 class="page-title">Produtos em Destaque</h1>
+    <h1 class="page-title">Promoções em Destaque</h1>
 
     <!-- ===== BUSCA ===== -->
     <div class="toolbar">
-      <input type="search" id="busca" class="search-input"
-             placeholder="Buscar produto..." aria-label="Buscar produto">
-
-      <!-- ===== FILTRO DE CATEGORIAS =====
-           Para criar nova categoria: adicione um botão aqui com
-           data-cat="nome" e coloque o mesmo nome no data-cat do card. -->
-      <div class="filters" role="group" aria-label="Filtrar por categoria">
-        <button class="filter-btn active" data-cat="todos">Todos</button>
-        <button class="filter-btn" data-cat="audio">Audio</button>
-        <button class="filter-btn" data-cat="eletronicos">Eletrônicos</button>
-        <button class="filter-btn" data-cat="acessorios">Acessórios</button>
-        <button class="filter-btn" data-cat="casa">Casa</button>
+      <div class="search-wrap">
+        <input type="search" id="busca" class="search-input"
+               placeholder="Buscar promoção..." aria-label="Buscar promoção">
+        <!-- Busca via Google (só admin): pesquisa o termo dentro do site no Google.
+             Fica escondido do cliente; aparece só com #admin na URL. -->
+        <button id="busca-google" class="google-btn" type="button" hidden
+                title="Pesquisar no Google dentro do PromoRadar">🔎 Google</button>
       </div>
+
+      <!-- Filtros de categoria são gerados automaticamente a partir das categorias em produtos.json -->
+      <div class="filters" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
     </div>
 
-    <!-- ============================================================
-         COMO ADICIONAR/EDITAR UM PRODUTO:
-         Copie um bloco <article class="card">...</article> inteiro,
-         cole abaixo e altere:
-           - data-cat  (categoria: audio/eletronicos/acessorios/casa)
-           - src da imagem e alt
-           - <h2> título
-           - <p class="card-desc"> descrição (otimizada p/ SEO)
-           - <span class="price"> preço
-           - href do link de afiliado do Mercado Livre
-         A busca lê o título automaticamente; o filtro lê data-cat.
-    ============================================================= -->
-    <section class="grid" id="grid" aria-label="Lista de produtos">
+    <!-- Grid preenchido dinamicamente a partir de produtos.json -->
+    <section class="grid" id="grid" aria-label="Lista de promoções"></section>
 
-      <!-- PRODUTO 1 -->
-      <article class="card" data-cat="eletronicos">
-        <div class="card-img">
-          <img src="assets/carregador.webp"
-               alt="carregador de celuylar universal"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Carregador Turbo 40w</h2>
-          <p class="card-desc">
-            Carregador Turbo 40w Compativel Com iPhone 8 
-            X Xr 11 12 13 14 Pro Max Usb Tipo C Duplo
-          </p>
-          <span class="price">R$ 33,00</span>
-          <a class="btn" href="https://meli.la/1efkAX1"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-      <!-- PRODUTO 2 -->
-      <article class="card" data-cat="eletronicos">
-        <div class="card-img">
-          <img src="assets/fonedeouvido.webp"
-               alt="Smartwatch com monitor de frequência cardíaca à prova d'água"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Fones De Ouvido Usb-c Tipo C</h2>
-          <p class="card-desc">
-            Fones De Ouvido Usb-c Tipo C Com Microfone Integrado Som Estéreo Alta Qualidade Controle De 
-            Chamadas Compatível Com iPhone 15 16 17 Android Samsung Xiaomi Motorola Conexão Direta Premium Eletric Teck
-          </p>
-          <span class="price">R$ 22,77</span>
-          <a class="btn" href="https://meli.la/1nW62Yv"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-      <!-- PRODUTO 3 -->
-      <article class="card" data-cat="eletronicos">
-        <div class="card-img">
-          <img src="assets/suporteCelular.webp"
-               alt="Teclado mecânico gamer RGB com switches azuis"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Suporte de Celular Veicular Automotivo 360º Universal</h2>
-          <p class="card-desc">
-            Suporte de Celular Veicular Automotivo 360º Universal Ajustável com Ventosa Gruda no Painel Vidro Parabrisa
-            para GPS Encaixe Giratório Articulado com Trava Automática Anti Queda para Carro Caminhão
-          </p>
-          <span class="price">R$ 24,95</span>
-          <a class="btn" href="https://meli.la/2ZJgx1h"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-      <!-- PRODUTO 4 -->
-      <article class="card" data-cat="eletronicos">
-        <div class="card-img">
-          <img src="assets/refletordeimagem.webp"
-               alt="Caixa de som Bluetooth portátil com graves potentes"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Projetor Smart Portátil Full Hd 4k</h2>
-          <p class="card-desc">
-            Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini 
-            Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos
-          </p>
-          <span class="price">R$ 193,00</span>
-          <a class="btn" href="https://meli.la/1oWRagp"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-      <!-- PRODUTO 5 -->
-      <article class="card" data-cat="acessorios">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+5"
-               alt="Mochila para notebook impermeável com porta USB"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Mochila Impermeável para Notebook</h2>
-          <p class="card-desc">
-            Mochila resistente à água com compartimento para notebook, porta USB
-            externa e vários bolsos organizadores. Ideal para trabalho e viagens.
-          </p>
-          <span class="price">R$ 89,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-5"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-      <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-        <!-- PRODUTO 6 -->
-      <article class="card" data-cat="casa">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/400x400?text=Produto+6"
-               alt="Luminária de mesa LED com ajuste de brilho e carregador"
-               loading="lazy" width="400" height="400">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Luminária de Mesa LED Recarregável</h2>
-          <p class="card-desc">
-            Luminária LED com ajuste de intensidade, proteção para os olhos e
-            base carregadora. Perfeita para estudos e home office.
-          </p>
-          <span class="price">R$ 74,90</span>
-          <a class="btn" href="https://mercadolivre.com/sec/SEU-LINK-AFILIADO-6"
-             target="_blank" rel="nofollow sponsored noopener">
-            Ver no Mercado Livre
-          </a>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- Mensagem quando nada é encontrado -->
-    <p id="sem-resultado" class="no-results" hidden>Nenhum produto encontrado.</p>
+    <p id="sem-resultado" class="no-results" hidden>Nenhuma promoção encontrada.</p>
+    <p id="carregando" class="no-results">Carregando promoções...</p>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="ano"></span> MinhaLoja. Todos os direitos reservados.</p>
+      <p>&copy; <span id="ano"></span> PromoRadar. Todos os direitos reservados.</p>
       <p class="disclaimer">
-        Este site participa do programa de afiliados do Mercado Livre.
-        Podemos receber comissão pelas compras realizadas através dos links.
+        O PromoRadar participa do programa de afiliados do Mercado Livre.
+        Podemos receber comissão pelas compras realizadas através dos links,
+        sem custo adicional para você. Preços sujeitos a alteração pelo vendedor.
       </p>
     </div>
   </footer>
 
+  <!-- ============================================================
+       MODAL: GERADOR DE POST PARA INSTAGRAM
+       Cria uma imagem 1080x1080 pronta + legenda com hashtags.
+  ============================================================= -->
+  <div id="ig-modal" class="ig-modal" hidden aria-hidden="true" role="dialog" aria-label="Gerador de post para Instagram">
+    <div class="ig-modal-box">
+      <button class="ig-close" id="ig-close" aria-label="Fechar">✕</button>
+      <h3 class="ig-title">📸 Post para Instagram</h3>
+
+      <div class="ig-content">
+        <div class="ig-preview">
+          <canvas id="ig-canvas" width="1080" height="1080"></canvas>
+        </div>
+
+        <div class="ig-side">
+          <label class="ig-label" for="ig-formato">Formato</label>
+          <select id="ig-formato" class="ig-select">
+            <option value="achado">Achado do dia</option>
+            <option value="relampago">Oferta relâmpago (Stories)</option>
+            <option value="desconto">Destaque de desconto</option>
+          </select>
+
+          <button id="ig-baixar" class="btn ig-btn">⬇️ Baixar imagem</button>
+
+          <label class="ig-label" for="ig-legenda">Legenda (copie e cole)</label>
+          <textarea id="ig-legenda" class="ig-legenda" rows="10" readonly></textarea>
+          <button id="ig-copiar" class="btn ig-btn ig-btn-alt">📋 Copiar legenda</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // ===============================================================
+    //  PROMORADAR — app principal
+    // ===============================================================
+    const SITE = { nome: "PromoRadar", handle: "@promoradar", dominio: "seusite.com.br" };
+
+    // Rótulos amigáveis das categorias
+    const ROTULO_CAT = {
+      todos: "Todos", audio: "Áudio", eletronicos: "Eletrônicos",
+      acessorios: "Acessórios", casa: "Casa"
+    };
+
+    let PRODUTOS = [];
+    let catAtual = "todos";
+    let produtoAtivoIG = null;
+
+    // Modo admin: botões internos (Google + gerar post) só aparecem com #admin
+    // na URL (ex: seusite.com.br/#admin). O cliente comum nunca vê.
+    const ADMIN = location.hash.toLowerCase().includes("admin")
+      || new URLSearchParams(location.search).has("admin");
+
+    // ---------- utilidades ----------
+    const $ = (sel) => document.querySelector(sel);
+    const money = (n) => "R$ " + Number(n).toFixed(2).replace(".", ",");
+    const pctDesconto = (p) =>
+      p.precoAntigo && p.precoAntigo > p.preco
+        ? Math.round((1 - p.preco / p.precoAntigo) * 100)
+        : null;
+
     // Ano do rodapé
-    document.getElementById('ano').textContent = new Date().getFullYear();
+    $("#ano").textContent = new Date().getFullYear();
 
-    // ===== Modo escuro (com memória via localStorage) =====
-    const temaBtn   = document.getElementById('tema-toggle');
-    const temaIcone = temaBtn.querySelector('.tema-icone');
-    const raiz      = document.documentElement;
+    // ===== Modo escuro (memória via localStorage) =====
+    (function tema() {
+      const btn = $("#tema-toggle");
+      const icone = btn.querySelector(".tema-icone");
+      const raiz = document.documentElement;
+      const salvo = localStorage.getItem("tema");
+      const escuroSistema = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      aplicar(salvo || (escuroSistema ? "dark" : "light"));
+      function aplicar(t) {
+        raiz.setAttribute("data-theme", t);
+        icone.textContent = t === "dark" ? "☀️" : "🌙";
+      }
+      btn.addEventListener("click", () => {
+        const novo = raiz.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        aplicar(novo);
+        localStorage.setItem("tema", novo);
+      });
+    })();
 
-    // Aplica tema salvo, ou segue preferência do sistema
-    const salvo = localStorage.getItem('tema');
-    const escuroSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const temaInicial = salvo || (escuroSistema ? 'dark' : 'light');
-    aplicarTema(temaInicial);
+    // ===== Carrega produtos.json e monta a página =====
+    fetch("produtos.json?v=" + Date.now())
+      .then((r) => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then((data) => {
+        PRODUTOS = data.produtos || [];
+        $("#carregando").hidden = true;
+        montarFiltros();
+        renderGrid();
+        injetarSchema();
+      })
+      .catch((err) => {
+        $("#carregando").textContent =
+          "Não foi possível carregar as promoções. Se você abriu o arquivo direto (file://), use um servidor local ou publique no GitHub Pages. (" + err.message + ")";
+      });
 
-    function aplicarTema(tema) {
-      raiz.setAttribute('data-theme', tema);
-      temaIcone.textContent = tema === 'dark' ? '☀️' : '🌙';
+    // ---------- filtros de categoria (dinâmicos) ----------
+    function montarFiltros() {
+      const cats = ["todos", ...new Set(PRODUTOS.map((p) => p.categoria))];
+      const box = $("#filtros");
+      box.innerHTML = cats
+        .map((c, i) =>
+          `<button class="filter-btn${i === 0 ? " active" : ""}" data-cat="${c}">${ROTULO_CAT[c] || c}</button>`
+        )
+        .join("");
+      box.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          box.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          catAtual = btn.dataset.cat;
+          renderGrid();
+        });
+      });
     }
 
-    temaBtn.addEventListener('click', () => {
-      const novo = raiz.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      aplicarTema(novo);
-      localStorage.setItem('tema', novo);
+    // ---------- render dos cards ----------
+    function renderGrid() {
+      const termo = $("#busca").value.trim().toLowerCase();
+      const grid = $("#grid");
+      const lista = PRODUTOS.filter((p) => {
+        const passaCat = catAtual === "todos" || p.categoria === catAtual;
+        const texto = (p.nome + " " + p.descricao).toLowerCase();
+        return passaCat && texto.includes(termo);
+      });
+
+      grid.innerHTML = lista.map(cardHTML).join("");
+      $("#sem-resultado").hidden = lista.length > 0;
+
+      // liga o botão "Gerar post" de cada card
+      if (ADMIN) {
+        grid.querySelectorAll("[data-ig]").forEach((btn) => {
+          btn.addEventListener("click", () => abrirIG(btn.dataset.ig));
+        });
+      }
+    }
+
+    function cardHTML(p) {
+      const pct = pctDesconto(p);
+      const badge = pct ? `<span class="badge-desc">-${pct}%</span>` : "";
+      const antigo = pct ? `<span class="price-old">${money(p.precoAntigo)}</span>` : "";
+      const linkOk = p.link && !p.link.startsWith("COLE");
+      return `
+      <article class="card" data-cat="${p.categoria}">
+        <div class="card-img">
+          ${badge}
+          <img src="${p.imagem}" alt="${p.alt}" loading="lazy" width="400" height="400">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">${p.nome}</h2>
+          <p class="card-desc">${p.descricao}</p>
+          <div class="price-row">${antigo}<span class="price">${money(p.preco)}</span></div>
+          <a class="btn${linkOk ? "" : " btn-disabled"}" href="${linkOk ? p.link : "#"}"
+             target="_blank" rel="nofollow sponsored noopener">
+            ${linkOk ? "Ver no Mercado Livre" : "Link em breve"}
+          </a>
+          ${ADMIN ? `<button class="btn btn-ig" type="button" data-ig="${p.id}">📸 Gerar post Instagram</button>` : ""}
+        </div>
+      </article>`;
+    }
+
+    // ---------- dados estruturados (JSON-LD) p/ Google ----------
+    function injetarSchema() {
+      const itens = PRODUTOS.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Product",
+          name: p.nome,
+          description: p.descricao,
+          image: p.imagem,
+          offers: {
+            "@type": "Offer",
+            price: Number(p.preco).toFixed(2),
+            priceCurrency: "BRL",
+            availability: "https://schema.org/InStock",
+            url: p.link
+          }
+        }
+      }));
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Promoções em Destaque - PromoRadar",
+        itemListElement: itens
+      };
+      const s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.textContent = JSON.stringify(schema);
+      document.head.appendChild(s);
+    }
+
+    // ===== Busca ao digitar =====
+    $("#busca").addEventListener("input", renderGrid);
+
+    // ===== Busca otimizada via Google (site:) — só admin =====
+    if (ADMIN) $("#busca-google").hidden = false;
+    $("#busca-google").addEventListener("click", () => {
+      const termo = $("#busca").value.trim();
+      const q = "site:" + SITE.dominio + (termo ? " " + termo : "");
+      window.open("https://www.google.com/search?q=" + encodeURIComponent(q), "_blank", "noopener");
     });
 
-    // ===== Busca + Filtro de categoria =====
-    const grid    = document.getElementById('grid');
-    const cards   = Array.from(grid.querySelectorAll('.card'));
-    const busca   = document.getElementById('busca');
-    const semRes  = document.getElementById('sem-resultado');
-    const botoes  = document.querySelectorAll('.filter-btn');
-    let catAtual  = 'todos';
+    // ===============================================================
+    //  GERADOR DE POST PARA INSTAGRAM (canvas 1080x1080)
+    // ===============================================================
+    const modal = $("#ig-modal");
+    const canvas = $("#ig-canvas");
+    const ctx = canvas.getContext("2d");
 
-    function aplicarFiltros() {
-      const termo = busca.value.trim().toLowerCase();
-      let visiveis = 0;
+    function abrirIG(id) {
+      produtoAtivoIG = PRODUTOS.find((p) => p.id === id);
+      if (!produtoAtivoIG) return;
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      desenharPost();
+      gerarLegenda();
+    }
+    function fecharIG() {
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+    }
+    $("#ig-close").addEventListener("click", fecharIG);
+    modal.addEventListener("click", (e) => { if (e.target === modal) fecharIG(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) fecharIG(); });
+    $("#ig-formato").addEventListener("change", () => { desenharPost(); gerarLegenda(); });
 
-      cards.forEach(card => {
-        const titulo = card.querySelector('.card-title').textContent.toLowerCase();
-        const desc   = card.querySelector('.card-desc').textContent.toLowerCase();
-        const cat    = card.dataset.cat;
-
-        const passaCat   = (catAtual === 'todos') || (cat === catAtual);
-        const passaBusca = titulo.includes(termo) || desc.includes(termo);
-
-        const mostrar = passaCat && passaBusca;
-        card.style.display = mostrar ? '' : 'none';
-        if (mostrar) visiveis++;
-      });
-
-      semRes.hidden = visiveis > 0;
+    // quebra texto em várias linhas dentro de uma largura máx
+    function wrap(text, maxW) {
+      const palavras = text.split(" ");
+      const linhas = [];
+      let linha = "";
+      for (const w of palavras) {
+        const teste = linha ? linha + " " + w : w;
+        if (ctx.measureText(teste).width > maxW && linha) {
+          linhas.push(linha);
+          linha = w;
+        } else linha = teste;
+      }
+      if (linha) linhas.push(linha);
+      return linhas;
     }
 
-    busca.addEventListener('input', aplicarFiltros);
+    function desenharPost() {
+      const p = produtoAtivoIG;
+      const fmt = $("#ig-formato").value;
+      const W = 1080, H = 1080;
+      const cores = {
+        achado:    ["#2563eb", "#1d4ed8"],
+        relampago: ["#f43f5e", "#b91c1c"],
+        desconto:  ["#059669", "#047857"]
+      }[fmt];
 
-    botoes.forEach(btn => {
-      btn.addEventListener('click', () => {
-        botoes.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        catAtual = btn.dataset.cat;
-        aplicarFiltros();
-      });
+      // fundo gradiente
+      const g = ctx.createLinearGradient(0, 0, W, H);
+      g.addColorStop(0, cores[0]);
+      g.addColorStop(1, cores[1]);
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, W, H);
+
+      // faixa/etiqueta topo
+      const etiqueta = { achado: "🔥 ACHADO DO DIA", relampago: "⚡ OFERTA RELÂMPAGO — SÓ HOJE!", desconto: "💸 SUPER DESCONTO" }[fmt];
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "700 44px Arial";
+      ctx.textAlign = "center";
+      ctx.fillText(etiqueta, W / 2, 90);
+
+      // moldura branca da foto
+      const bx = 190, by = 150, bw = 700, bh = 560;
+      ctx.fillStyle = "#ffffff";
+      roundRect(bx - 16, by - 16, bw + 32, bh + 32, 28);
+      ctx.fill();
+
+      // desenha imagem do produto (object-fit: cover manual)
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.onload = () => {
+        desenharFundoBase();
+        drawCover(img, bx, by, bw, bh, 20);
+        desenharTexto();
+      };
+      img.onerror = () => { desenharFundoBase(); desenharTexto(); };
+      img.src = p.imagem;
+
+      // funções internas que redesenham por cima após imagem carregar
+      function desenharFundoBase() {
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "700 44px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText(etiqueta, W / 2, 90);
+        ctx.fillStyle = "#ffffff";
+        roundRect(bx - 16, by - 16, bw + 32, bh + 32, 28);
+        ctx.fill();
+      }
+
+      function desenharTexto() {
+        const pct = pctDesconto(p);
+        // selo de desconto
+        if (pct) {
+          ctx.fillStyle = "#facc15";
+          ctx.beginPath();
+          ctx.arc(880, 200, 90, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#111827";
+          ctx.font = "800 52px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText("-" + pct + "%", 880, 190);
+          ctx.font = "700 26px Arial";
+          ctx.fillText("OFF", 880, 228);
+        }
+
+        // título
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "800 56px Arial";
+        ctx.textAlign = "center";
+        const linhas = wrap(p.nome, 940).slice(0, 2);
+        let ty = 800;
+        linhas.forEach((l) => { ctx.fillText(l, W / 2, ty); ty += 66; });
+
+        // preço
+        ty += 10;
+        if (pct) {
+          ctx.font = "600 40px Arial";
+          ctx.fillStyle = "rgba(255,255,255,0.75)";
+          const antigoTxt = money(p.precoAntigo);
+          ctx.fillText(antigoTxt, W / 2, ty);
+          const wOld = ctx.measureText(antigoTxt).width;
+          ctx.strokeStyle = "rgba(255,255,255,0.85)";
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.moveTo(W / 2 - wOld / 2, ty - 12);
+          ctx.lineTo(W / 2 + wOld / 2, ty - 12);
+          ctx.stroke();
+          ty += 70;
+        } else ty += 30;
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "900 96px Arial";
+        ctx.fillText(money(p.preco), W / 2, ty);
+
+        // rodapé marca
+        ctx.font = "700 40px Arial";
+        ctx.fillStyle = "rgba(255,255,255,0.95)";
+        ctx.fillText("📡 " + SITE.nome + "  •  " + SITE.handle, W / 2, 1030);
+      }
+    }
+
+    // retângulo arredondado
+    function roundRect(x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    // desenha imagem cobrindo a área (object-fit: cover) com cantos arredondados
+    function drawCover(img, x, y, w, h, r) {
+      ctx.save();
+      roundRect(x, y, w, h, r);
+      ctx.clip();
+      const ar = img.width / img.height;
+      const arDest = w / h;
+      let sw, sh, sx, sy;
+      if (ar > arDest) { sh = img.height; sw = sh * arDest; sx = (img.width - sw) / 2; sy = 0; }
+      else { sw = img.width; sh = sw / arDest; sx = 0; sy = (img.height - sh) / 2; }
+      ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+      ctx.restore();
+    }
+
+    // ---------- legenda pronta com hashtags ----------
+    function gerarLegenda() {
+      const p = produtoAtivoIG;
+      const fmt = $("#ig-formato").value;
+      const pct = pctDesconto(p);
+      const tags =
+        "#promoradar #mercadolivre #achadosdobrasil #promocao #ofertas #desconto " +
+        "#economia #achadinhos #comprasonline #" + p.categoria;
+
+      const abertura = {
+        achado: "🔥 ACHADO DO DIA!",
+        relampago: "⚡ OFERTA RELÂMPAGO — corre que é SÓ HOJE!",
+        desconto: "💸 OLHA ESSE DESCONTO!"
+      }[fmt];
+
+      const precoTxt = pct
+        ? `De ${money(p.precoAntigo)} por *${money(p.preco)}* (${pct}% OFF!) 🤑`
+        : `Por apenas *${money(p.preco)}* 🤑`;
+
+      const texto =
+`${abertura}
+
+${p.nome}
+${p.descricao}
+
+${precoTxt}
+
+🛒 Link na bio / nos stories para comprar no Mercado Livre.
+📡 Siga @promoradar e ative o sininho pra não perder promoção!
+
+.
+.
+${tags}`;
+
+      $("#ig-legenda").value = texto;
+    }
+
+    $("#ig-baixar").addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.download = "promoradar-" + produtoAtivoIG.id + ".png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
+
+    $("#ig-copiar").addEventListener("click", async () => {
+      const ta = $("#ig-legenda");
+      try {
+        await navigator.clipboard.writeText(ta.value);
+        const b = $("#ig-copiar");
+        const txt = b.textContent;
+        b.textContent = "✅ Copiado!";
+        setTimeout(() => (b.textContent = txt), 1500);
+      } catch {
+        ta.select();
+        document.execCommand("copy");
+      }
     });
   </script>
 
